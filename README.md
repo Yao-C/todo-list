@@ -82,3 +82,19 @@ $ npm i redux react-redux
 // Add remove props in TodoListItem.js
 
 ```
+
+## 5) redux-persist, add MARK action
+
+```terminal
+$ npm i redux-persist
+
+// Add persistReducer, storage, autoMergeLevel2, redux devtools in src/store.js
+// Add persistStore, PersistGate in src/index.js
+// Check isCompleted in TodoListItem.js
+
+// Add MARK action in actions.js
+// Add in reducer.js
+// Pass from TodoList.js
+// Recived in TodoListItem.js
+
+```
