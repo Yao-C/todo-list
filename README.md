@@ -98,3 +98,39 @@ $ npm i redux-persist
 // Recived in TodoListItem.js
 
 ```
+
+## 6) babel runtime, redux-devtools-extension, redux-thunk
+
+```terminal
+$ npm i --save-dev @babel/plugin-transform-runtime
+
+$ npm i @babel/runtime redux-devtools-extension redux-thunk
+
+```
+
+- Add applyMiddleware, thunk, composeWithDevTools in src/store.js
+- Add LOAD actions in actions.js
+- Add loadTodos, displayAlert in thunk.js
+- Add isLoading in reducers.js
+- import isLoading in src/store.js
+
+- import loadTodos, useEffect, check isLoading in TodoList.js
+
+- Add LOADs in todos (reducers.js) 
+
+- (actions.js) Change text to todo in createTodo 
+- (reducers.js) Change text to todo (CREATE_TODO), remove newTodo 
+- Change createTodo (NewTodoForm.js) to addTodoRequest (from thunks)
+- import createTodo in thunks.js, add addTodoRequest
+
+- (actions.js) Change text to todo in removeTodo 
+- (reducers.js) Change text to todo (REMOVE_TODO), add id
+- (thunks.js) add removeTodoRequest
+- (TodoList.js) change removeTodo to removeTodoRequest, change text to id
+- (TodoListItem.js) change todo.text to todo.id in onRemovePressed
+
+- (actions.js) Change text to todo in markTodoAsCompleted
+- (reducers.js) Change text to todo (MARK_TODO_AS_COMPLETED), check id
+- (thunks.js) add markTodoAsCompletedRequest
+- (TodoList.js) change markTodoAsCompleted to markTodoAsCompletedRequest, change text to id
+- (TodoListItem.js) change todo.text to todo.id in onCompletedPressed
