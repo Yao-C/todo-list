@@ -61,6 +61,24 @@ $ nano .prettierrc
 
 ## 3) TodoList components
 
+src/todos
+
 - NewTodoForm
 - TodoList
 - TodoListItem
+
+## 4) redux, react-redux
+```terminal
+$ npm i redux react-redux
+
+// Add store.js
+
+// Add Provider, store in src/index.js
+// Add action.js in src/todos
+// Add reducers.js, add reducers in store.js
+
+// Add connect, create action in NewTodoForm.js
+// Add connect, remove action in TodoList.js
+// Add remove props in TodoListItem.js
+
+```
