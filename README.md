@@ -1,5 +1,7 @@
 # Start from scratch
 
+## 1) babel 7, react 17, webpack 5, hot loading
+
 ```terminal
 $ mkdir todo-list
 $ cd todo-list
@@ -35,4 +37,21 @@ $ npm install --save-dev babel-loader css-loader react-hot-loader style-loader w
 
 ```
 
+## 2) ESlint, prettier
+```terminal
+$ npm install --save-dev eslint   # "eslint": "^7.18.0"
+// $ ./node_modules/.bin/eslint --init   # .eslintrc.json
+
+// Add .eslintrc.json manually
+
+$ nano .eslintignore
+$ npm install --save-dev standard eslint-plugin-standard eslint-plugin-react
+
+$ npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
+$ nano .prettierignore
+$ nano .prettierrc
+
+// Add scripts "lint", "lint:fix"
+
+```
 
