@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Review react concepts in a ecosystem.",
   "main": "index.js",
-  "exports": {
-    ".": "./index.js"
-  },
   "scripts": {
     "dev": "npx webpack serve --mode development",
     "build": "npx webpack --mode development",

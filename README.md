@@ -36,6 +36,10 @@ $ npm install --save-dev babel-loader css-loader react-hot-loader style-loader w
 // Add scripts "dev", "build"
 
 ```
+> Error: No "exports" main defined in ...
+>
+> Fix: npm update, 
+> 'dev': webpack-dev-server to webpack serve
 
 ## 2) ESlint, prettier
 ```terminal
@@ -55,3 +59,8 @@ $ nano .prettierrc
 
 ```
 
+## 3) TodoList components
+
+- NewTodoForm
+- TodoList
+- TodoListItem
