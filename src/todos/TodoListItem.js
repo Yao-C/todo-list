@@ -10,12 +10,17 @@ const TodoItemContainer = styled.div`
     box-shadow: 0 4px 8px grey;
 `;
 
-const TodoItemContainerWithWarning = styled(TodoItemContainer)`
-    border-bottom: ${props => (new Date(props.createdAt) > new Date(Date.now() - 8640000 * 5)
+export const getBorderStyleForDate = (startingDate, currentDate) =>
+    startingDate > new Date(currentDate - 86400000 * 5)
         ? 'none'
-        : '2px solid red')};
-`;
+        : '2px solid red';
 
+const TodoItemContainerWithWarning = styled(TodoItemContainer)`
+    border-bottom: ${(props) =>
+        new Date(props.createdAt) > new Date(Date.now() - 8640000 * 5)
+            ? 'none'
+            : '2px solid red'};
+`;
 
 const ButtonsContainer = styled.div`
     position: absolute;
@@ -43,7 +48,9 @@ const RemoveButton = styled(Button)`
 `;
 
 const TodoListItem = ({ todo, onRemovePressed, onCompletedPressed }) => {
-    const Container = todo.isCompleted ? TodoItemContainer : TodoItemContainerWithWarning;
+    const Container = todo.isCompleted
+        ? TodoItemContainer
+        : TodoItemContainerWithWarning;
     return (
         <Container createdAt={todo.createdAt}>
             <h3>{todo.text}</h3>
@@ -53,7 +60,9 @@ const TodoListItem = ({ todo, onRemovePressed, onCompletedPressed }) => {
             </p>
             <ButtonsContainer>
                 {todo.isCompleted ? null : (
-                    <CompletedButton onClick={() => onCompletedPressed(todo.id)}>
+                    <CompletedButton
+                        onClick={() => onCompletedPressed(todo.id)}
+                    >
                         Mark As Completed
                     </CompletedButton>
                 )}

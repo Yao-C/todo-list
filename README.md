@@ -1,4 +1,4 @@
-# Start from scratch
+# Start from scratch (A react ecosystem, from Lynda.com)
 
 ## 1) babel 7, react 17, webpack 5, hot loading
 
@@ -164,3 +164,18 @@ $ npm i styled-components
 - Add those in js as styled-components
 - (TodoListItem.js) add props in styled-component
 - Reuse styled-component
+
+## 9) @babel/register, mocha, chai
+
+```terminal
+$ npm i --save-dev @babel/register mocha chai 
+
+// Add test scripts in package.json
+// Add selectors.test.js, reducers.test.js
+
+$ npm i --save-dev node-fetch fetch-mock sinon
+
+// Add thunks.test.js
+// Add TodoListItem.test.js
+
+```
