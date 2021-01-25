@@ -153,3 +153,14 @@ $ npm i reselect
 
 - (selectors.js) import createSelector, add getIncompleteTodos, getCompletedTodos
 - (TodoList.js) import getCompletedTodos, getIncompleteTodos
+
+## 8) styled-components (css to js)
+
+```terminal
+$ npm i styled-components
+```
+
+- Delete App.css, NewTodoForm.css, TodoList.css, TodoListItem.css
+- Add those in js as styled-components
+- (TodoListItem.js) add props in styled-component
+- Reuse styled-component
