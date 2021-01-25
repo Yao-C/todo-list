@@ -134,3 +134,22 @@ $ npm i @babel/runtime redux-devtools-extension redux-thunk
 - (thunks.js) add markTodoAsCompletedRequest
 - (TodoList.js) change markTodoAsCompleted to markTodoAsCompletedRequest, change text to id
 - (TodoListItem.js) change todo.text to todo.id in onCompletedPressed
+
+> Error: regeneratorRuntime is not defined
+> Fix: npm i --save-dev regenerator-runtime,
+> Add plugins in babel.config.json
+
+## 7) Add selectors.js
+
+- (store.js) Remove isLoading
+- (New src/todos/selectors.js): getTodos, getTodosLoading
+- (NewTodoForm.js) import getTodos from selectors
+- (reducers.js) rewrite return
+- (TodoList.js) import getTodosLoading from selectors
+
+```terminal
+$ npm i reselect 
+```
+
+- (selectors.js) import createSelector, add getIncompleteTodos, getCompletedTodos
+- (TodoList.js) import getCompletedTodos, getIncompleteTodos
