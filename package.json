@@ -4,6 +4,7 @@
   "description": "Review react concepts in a ecosystem.",
   "main": "index.js",
   "scripts": {
+    "start": "npx babel-node src/server.js",
     "dev": "npx webpack serve --mode development",
     "build": "npx webpack --mode development",
     "test": "mocha \"src/**/*.test.js\" --require @babel/register --recursive",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
@@ -42,6 +44,9 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
@@ -50,6 +55,7 @@
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "uuid": "^8.3.2"
   }
 }

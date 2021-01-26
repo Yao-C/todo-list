@@ -179,3 +179,13 @@ $ npm i --save-dev node-fetch fetch-mock sinon
 // Add TodoListItem.test.js
 
 ```
+
+## 10) Add server.js
+
+```terminal
+$ npm i body-parser cors express uuid
+$ npm i --save-dev @babel/node
+
+// Add server.js
+// Add start script
+```
